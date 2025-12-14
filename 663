@@ -1,0 +1,8 @@
+def is_palindrome(text: str) -> bool:
+
+    normalized_text = "".join(filter(str.isalnum, text)).lower()
+    return normalized_text == normalized_text[::-1]
+
+user_input = input()
+
+print(is_palindrome(user_input))
