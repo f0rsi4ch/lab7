@@ -1,0 +1,12 @@
+def recursive_sum(a: int, b: int) -> int:
+    if b == 0:
+        return a
+    elif b > 0:
+        return recursive_sum(a + 1, b - 1)
+    else:  # b < 0
+        return recursive_sum(a - 1, b + 1)
+
+user_a = int(input("Введіть перше число (a): "))
+user_b = int(input("Введіть друге число (b): "))
+
+print(recursive_sum(user_a, user_b))
