@@ -1,0 +1,31 @@
+def process_and_group_scores():
+    grouped_grades = {'A': [], 'B': [], 'C': [], 'D': [], 'F': []}
+    
+    input_line = input()
+    score_strings = input_line.split()
+    
+    for score_str in score_strings:
+        try:
+            score = int(score_str)
+            
+            if 0 <= score <= 100:
+                if 90 <= score:
+                    grade_key = 'A'
+                elif 80 <= score:
+                    grade_key = 'B'
+                elif 70 <= score:
+                    grade_key = 'C'
+                elif 60 <= score:
+                    grade_key = 'D'
+                else:
+                    grade_key = 'F'
+                
+                grouped_grades[grade_key].append(score)
+            
+        except ValueError:
+            pass 
+
+    print(grouped_grades)
+    return grouped_grades
+
+process_and_group_scores()
