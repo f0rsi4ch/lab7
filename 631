@@ -1,0 +1,8 @@
+def generate_square_dict():
+    n_input = input("Введіть ціле число N: ")
+    n = int(n_input)
+    square_dict = {i: i * i for i in range(1, n + 1)}
+    print(square_dict)
+    return square_dict
+
+generate_square_dict()
